@@ -1,57 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rapport d'orientation</title>
-  <link rel="stylesheet" href="bootstrap.css">
-</head>
-<body>
-
-  <header class="container mt-3">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-3">
-      <div class="container">
-        <a class="navbar-brand fw-bold text-dark" href="#">Rapport d'orientation</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#analyse">Analyse du projet</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#propositions">Propositions</a>
-            </li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport d'orientation</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+  </head>
+  <body>
+    <header class="container mt-3">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-3">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-dark" href="#"
+            >Rapport d'orientation</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#analyse"
+                  >Analyse du projet</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#propositions"
+                  >Propositions</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#specs"
+                  >Spécifications techniques</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+
+    <main class="container my-5">
+      <section id="analyse" class="mb-5">
+        <div id="presentation" class="card mt-4 bg-light">
+          <div class="card-body">
+            <h2 class="card-title">Analyse du projet</h2>
+
+            <div class="row mt-3 g-3">
+              <div id="objectifs" class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Présentation du projet</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div id="objectifs" class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Objectifs et visées du projet</h5>
+                    <p class="card-text">Ce que le client veut.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="contraintes" class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Contraintes du projet</h5>
+                    <p class="card-text">Ce que le client ne veut pas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="contraintes-tech" class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Contraintes technologiques</h5>
+                    <p class="card-text">
+                      Longévité, stabilité, efficacité, maintenabilité du
+                      projet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="propositions" class="mb-5">
+        <div class="card mt-4 bg-light">
+          <div class="card-body">
+            <h2 class="card-title">Propositions</h2>
+
+            <div class="row mt-3 g-3">
+
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Proposition 1</h5>
+                    <div class="row mt-2 g-2">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Fonctionnement</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Réponse aux défis et contraintes</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Interactions attendues</h6>
+                            <p class="card-text">Amorce, déroulement, temps…</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Schématisation matérielle</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Schématisation logicielle</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Justification des technologies</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Proposition 2</h5>
+                    <div class="row mt-2 g-2">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Fonctionnement</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Réponse aux défis et contraintes</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Interactions attendues</h6>
+                            <p class="card-text">Amorce, déroulement, temps…</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Schématisation matérielle</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Schématisation logicielle</h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="card-title">Justification des technologies</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="specs" class="mb-5">
+        <div class="card mt-4 bg-light">
+          <div class="card-body">
+            <h2 class="card-title">Spécifications techniques</h2>
+
+            <div class="row mt-3 g-3">
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Sources d'informations</h5>
+                    <p class="card-text">Sources variées, pertinentes et crédibles.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Sources primaires et secondaires</h5>
+                    <p class="card-text">Précision et généralisation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container mb-3">
+      <div class="bg-dark text-white py-4 rounded-3 text-center">
+        <p class="mb-2 opacity-75">
+          Veille technologique - TP2 - Cégep Garneau
+        </p>
+        <span class="fs-6"
+          >Alexandre Roy - Félix Laliberté - Anthony Pageau - Léo Paquin</span
+        >
       </div>
-    </nav>
-  </header>
-
-
-  <main class="container my-5">
-
-    <section id="analyse" class="mb-5">
-      <h2>Analyse du projet</h2>
-      <p>Contenu de l'analyse du projet.</p>
-    </section>
-
-    <section id="propositions" class="mb-5">
-      <h2>Propositions</h2>
-      <p>Contenu des propositions.</p>
-    </section>
-
-  </main>
-
-  <footer class="container mb-3">
-    <div class="bg-dark text-white py-4 rounded-3 text-center">
-      <p class="mb-2 opacity-75">
-            Veille technologique - TP2 - Cégep Garneau
-          </p>
-          <span class="fs-6">Alexandre Roy - Félix Laliberté - Anthony Pageau - Léo Paquin</span>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
