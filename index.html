@@ -40,7 +40,7 @@
           <h2 class="card-title">Analyse du projet</h2>
 
           <div class="row mt-3 g-3">
-            <div id="objectifs" class="col-6">
+            <div id="presentation" class="col-12">
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Présentation du projet</h5>
@@ -71,14 +71,16 @@
               </div>
             </div>
 
-            <div id="contraintes-tech" class="col-6">
+            <div id="contraintes-tech" class="col-12">
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Contraintes technologiques</h5>
-                  <p class="card-text">
-                    Longévité, stabilité, efficacité, maintenabilité du
-                    projet.
-                  </p>
+                  <ul class="card-text mb-0">
+                    <li>Longévité : le Raspberry Pi et la webcam peuvent tourner longtemps sans problème. Le Pi est fait pour rester allumé en continu et la webcam a pas de pièces qui s'usent.</li>
+                    <li>Stabilité : Python, React et MediaPipe sont des technologies matures et bien testées. Le Pi aussi est fiable quand il tourne 24/7.</li>
+                    <li>Efficacité : MediaPipe est optimisé pour marcher en temps réel même sur du matériel moins puissant. React met à jour l'interface vite grâce à son rendu virtuel.</li>
+                    <li>Maintenabilité : Python et React ont de grosses communautés et beaucoup de documentation. Le Pi est facile à remplacer si il brise, et le code est séparé en backend et frontend ce qui rend les modifications plus simples.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -139,11 +141,11 @@
                       <div class="card">
                         <div class="card-body">
                           <h6 class="card-title">Interactions attendues</h6>
-                          <p class="card-text">Mettre une mise pour permettre au jeu de débuter. Lors du jeu, les
-                            colonnes peuvent se détruisent
-                            avec des pioches déterminés au hasard. Lorsqu'il n'existe plus de colonnes, le coffre ouvre
-                            avec un certain multiplicateur.
-                          </p>
+                          <ul class="card-text mb-0">
+                            <li>Amorce : le joueur se place devant la borne et met sa mise en crédits pour démarrer la partie.</li>
+                            <li>Déroulement : le joueur fait des mouvements devant la caméra pour recevoir des crédits afin de miner les colonnes. Les pioches et les matériaux sont déterminés au hasard. Quand il reste plus de colonnes, le coffre s'ouvre avec un multiplicateur.</li>
+                            <li>Temps : une partie dure plus ou moins une minute selon la chance du joueur avec les pioches.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -167,7 +169,14 @@
                       <div class="card">
                         <div class="card-body">
                           <h6 class="card-title">Justification des technologies</h6>
-                          <p class="mb-0"></p>
+                          <ul class="mb-0">
+                            <li>OpenCV : utlisé pour capturer le flux vidéo de la webcam.</li>
+                            <li>MediaPipe : permet de détecter les poses corporelles en temps réel.</li>
+                            <li>Python : notre langage principal côté serveur, car c'est le langage où OpenCV et MediaPipe sont le mieux intégrés.</li>
+                            <li>React : nous permet de créer une interface web réactive qui se met à jour en temps réel selon les mouvements du joueur.</li>
+                            <li>TailwindCSS : framework CSS utilitaire qui va rendre l'interface plus belle.</li>
+                            <li>Raspberry Pi : petit ordinateur compact, suffisamment puissant pour le traitement vidéo.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -195,8 +204,10 @@
                         <div class="card-body">
                           <h6 class="card-title">Réponse aux défis et contraintes</h6>
                           <ul class="mb-0">
-                            <li>Faire en sorte que les cartes NFC soient connectées</li>
-                            <li>Faire en sorte que lorsque les cartes sont scannées, il y a une action dans le jeu </li>
+                            <li>Le joueur doit se déplacer physiquement pour trouver les cartes NFC cachées, ce qui élimine la sédentarité.</li>
+                            <li>Le jeu fonctionne avec des crédits et non de l'argent réel, donc pas de jeu de hasard avec de l'argent.</li>
+                            <li>Le fait de devoir bouger et chercher les cartes rend l'expérience plus active et amusante, ce qui aide à décrocher de l'addiction du casino traditionnel.</li>
+                            <li>Les cartes NFC doivent être bien connectées au lecteur pour que le scan déclenche les bonnes actions dans le jeu.</li>
                           </ul>
                         </div>
                       </div>
@@ -205,10 +216,11 @@
                       <div class="card">
                         <div class="card-body">
                           <h6 class="card-title">Interactions attendues</h6>
-                          <p class="card-text">Lorsque la mise est déposée, le jeu débute. L'utilisateur doit trouvé des
-                            cartes et les scanner pour faire fonctionner le jeu. Le jeu est un machine à sous, toute
-                            les cartes font des actions différentes.
-                          </p>
+                          <ul class="card-text mb-0">
+                            <li>Amorce : le joueur met sa mise en crédits et le jeu commence.</li>
+                            <li>Déroulement : le joueur doit se déplacer pour trouver des cartes NFC cachées dans l'environnement. Quand il en trouve une, il la scanne sur le lecteur et ça déclenche une action dans la machine à sous. Chaque carte fait une action différente.</li>
+                            <li>Temps : une partie dure quelque minutes, dépendamment du temps que le joueur prend pour trouver les cartes.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -232,7 +244,14 @@
                       <div class="card">
                         <div class="card-body">
                           <h6 class="card-title">Justification des technologies</h6>
-                          <p class="mb-0"></p>
+                          <ul class="mb-0">
+                            <li>Cartes NFC : utilisées pour cacher des actions dans l'environnement de jeu.</li>
+                            <li>Lecteur NFC : connecté au Raspberry Pi pour lire les cartes scannées par le joueur.</li>
+                            <li>Python : langage côté serveur qui traite les données reçues du lecteur NFC.</li>
+                            <li>React : nous permet de créer une interface web réactive qui change selon la carte scannée.</li>
+                            <li>TailwindCSS : framework CSS utilitaire qui va rendre l'interface plus belle.</li>
+                            <li>Raspberry Pi : petit ordinateur compact qui gère la communication entre le lecteur NFC et l'interface web.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
